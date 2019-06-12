@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  todos = [];
+  todos = ["shopping", "feed the cats"];
 
   addToDo(inputValue) {
     if(this.todos.indexOf(inputValue) == -1) {

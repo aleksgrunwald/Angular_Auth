@@ -11,7 +11,11 @@
       </div>
     </div>
   </form>
-  <div>{{ todo.value }}</div>
+<!--  <div class="btn btn-primary">Show my my list</div>-->
+  <div class="list-item" *ngFor="let todo of todos">
+    <p>{{ todo }}</p>
+    <i class="material-icons">delete</i>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
