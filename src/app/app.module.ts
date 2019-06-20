@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { OktaAuthModule } from '@okta/okta-angular';
 import { UserListComponent } from './user-list/user-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

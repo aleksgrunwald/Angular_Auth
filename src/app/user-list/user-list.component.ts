@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.sass']
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent {
 
-  constructor() { }
+todos = ["shopping", "feed the cats"];
 
-  ngOnInit() {
+addToDo(inputValue) {
+    if(this.todos.indexOf(inputValue) == -1) {
+      this.todos.push(inputValue);
+    };
+    console.log(this.todos)
+    console.log(this.todos.indexOf(inputValue))
   }
 
 }

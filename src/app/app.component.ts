@@ -5,16 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
-
-  todos = ["shopping", "feed the cats"];
-
-  addToDo(inputValue) {
-    if(this.todos.indexOf(inputValue) == -1) {
-      this.todos.push(inputValue);
-    };
-    console.log(this.todos)
-    console.log(this.todos.indexOf(inputValue))
-  }
-
-}
+export class AppComponent { }
