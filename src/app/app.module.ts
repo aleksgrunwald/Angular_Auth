@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { OktaAuthModule } from '@okta/okta-angular';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
