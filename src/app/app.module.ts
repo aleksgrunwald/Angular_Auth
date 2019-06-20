@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
+import { OktaAuthModule } from '@okta/okta-angular';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,12 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    OktaAuthModule.initAuth({
+      issuer: 'https://dev-294434-admin.okta.com/oauth2/default',
+      redirectUri: 'http://localhost:4200/implicit/callback',
+      clientId: '0oar4f755oih4tGaM356'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
