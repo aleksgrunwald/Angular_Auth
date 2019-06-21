@@ -20,7 +20,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     FormsModule,
     OktaAuthModule.initAuth({
-      issuer: 'https://dev-294434-admin.okta.com/oauth2/default',
+      issuer: 'https://agr-dev-294434.okta.com/oauth2/default',
       redirectUri: 'http://localhost:4200/implicit/callback',
       clientId: '0oar4f755oih4tGaM356'
     })
