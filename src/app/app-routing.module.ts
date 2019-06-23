@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { UserListComponent } from './user-list/user-list.component';
 
-import { OktaCallbackComponent, OktaAuthGuard } from '@okta/okta-angular';
+import { OktaCallbackComponent, OktaAuthGuard, OktaAuthModule } from '@okta/okta-angular';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,7 +15,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    OktaAuthModule.initAuth({
+          issuer: 'https://agr-dev-294434.okta.com/oauth2/default',
+          redirectUri: 'http://localhost:4200/implicit/callback',
+          clientId: '0oar4f755oih4tGaM356'
+        })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
