@@ -1,4 +1,8 @@
-<section class="login">
-  <button mat-button *ngIf="!isAuthenticated" (click)="login()"> Login </button>
-  <button mat-button *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
-</section>
+<mat-toolbar>
+  <mat-toolbar-row>
+<!--  <section class="login">-->
+    <button mat-button *ngIf="!isAuthenticated" (click)="login()"> Login </button>
+    <button mat-button *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+<!--  </section>-->
+    </mat-toolbar-row>
+</mat-toolbar>

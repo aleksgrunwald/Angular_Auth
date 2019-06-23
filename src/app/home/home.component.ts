@@ -8,6 +8,8 @@ import { OktaAuthService } from '@okta/okta-angular';
 })
 export class HomeComponent implements OnInit {
 
+  isAuthenticated: boolean;
+
   constructor(public oktaAuth: OktaAuthService) {}
 
   async ngOnInit() {
